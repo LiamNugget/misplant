@@ -1,0 +1,163 @@
+{
+  "clones": [
+    {
+      "id": 1,
+      "name": "Trichocereus Arboricola",
+      "slug": "trichocereus-arboricola",
+      "description": "A beautiful bridgesii clone with wide ribs and short spines.",
+      "mainImage": "https://misplant.net/photos/arboricola-main.jpg",
+      "detailPageUrl": "https://misplant.net/Arboricola2.html",
+      "images": [
+        "https://misplant.net/photos/arboricola-main.jpg",
+        "https://misplant.net/photos/arboricola-detail.jpg"
+      ],
+      "species": "bridgesii",
+      "crosses": [1, 2]
+    },
+    {
+      "id": 2,
+      "name": "TPM Monstrose",
+      "slug": "tpm-monstrose",
+      "description": "The famous TPM clone in monstrose form.",
+      "mainImage": "https://misplant.net/photos/tpm-monstrose.jpg",
+      "detailPageUrl": "https://misplant.net/TPM-Monstrose.html",
+      "images": [
+        "https://misplant.net/photos/tpm-monstrose.jpg",
+        "https://misplant.net/photos/tpm-monstrose-2.jpg",
+        "https://misplant.net/photos/tpm-monstrose-3.jpg"
+      ],
+      "species": "pachanoi",
+      "crosses": [3]
+    },
+    {
+      "id": 3,
+      "name": "Vari Red Grandi",
+      "slug": "vari-red-grandi",
+      "description": "Variegated red grandiflorus hybrid.",
+      "mainImage": null,
+      "detailPageUrl": null,
+      "images": [],
+      "species": "peruvianus",
+      "crosses": []
+    },
+    {
+      "id": 4,
+      "name": "Sharxx Blue",
+      "slug": "sharxx-blue",
+      "description": "Famous Peruvianus with blue coloring.",
+      "mainImage": "https://misplant.net/photos/sharxx-blue.jpg",
+      "detailPageUrl": "https://misplant.net/SharxxBlue.html",
+      "images": [
+        "https://misplant.net/photos/sharxx-blue.jpg"
+      ],
+      "species": "peruvianus",
+      "crosses": [4, 5]
+    },
+    {
+      "id": 5,
+      "name": "SS02 Baker",
+      "slug": "ss02-baker",
+      "description": "Collector-grade bridgesii clone.",
+      "mainImage": "https://misplant.net/photos/ss02-baker.jpg",
+      "detailPageUrl": null,
+      "images": [
+        "https://misplant.net/photos/ss02-baker.jpg"
+      ],
+      "species": "bridgesii",
+      "crosses": []
+    }
+  ],
+  "crosses": [
+    {
+      "code": "0080",
+      "cross": "Arboricola x Vari Red Grandi",
+      "motherId": 1,
+      "motherName": "Arboricola",
+      "fatherId": 3,
+      "fatherName": "Vari Red Grandi",
+      "pricePerUnit": 10,
+      "quantityUnit": "100",
+      "hasMultiplePricing": false,
+      "allPrices": [{"quantity": 100, "price": 10}],
+      "status": "available",
+      "isOP": false,
+      "isF2": false,
+      "cloneId": 1,
+      "cloneName": "Trichocereus Arboricola"
+    },
+    {
+      "code": "0081",
+      "cross": "Arboricola x Sharxx Blue",
+      "motherId": 1,
+      "motherName": "Arboricola",
+      "fatherId": 4,
+      "fatherName": "Sharxx Blue",
+      "pricePerUnit": 15,
+      "quantityUnit": "30",
+      "hasMultiplePricing": true,
+      "allPrices": [{"quantity": 30, "price": 15}, {"quantity": 100, "price": 40}],
+      "status": "available",
+      "isOP": false,
+      "isF2": false,
+      "cloneId": 1,
+      "cloneName": "Trichocereus Arboricola"
+    },
+    {
+      "code": "0082",
+      "cross": "TPM Monstrose OP",
+      "motherId": 2,
+      "motherName": "TPM Monstrose",
+      "fatherId": null,
+      "fatherName": null,
+      "pricePerUnit": 20,
+      "quantityUnit": "~1 gram",
+      "hasMultiplePricing": false,
+      "allPrices": [{"quantity": "~1 gram", "price": 20}],
+      "status": "available",
+      "isOP": true,
+      "isF2": false,
+      "cloneId": 2,
+      "cloneName": "TPM Monstrose"
+    },
+    {
+      "code": "0083",
+      "cross": "Sharxx Blue x Arboricola",
+      "motherId": 4,
+      "motherName": "Sharxx Blue",
+      "fatherId": 1,
+      "fatherName": "Arboricola",
+      "pricePerUnit": 12,
+      "quantityUnit": "100",
+      "hasMultiplePricing": false,
+      "allPrices": [{"quantity": 100, "price": 12}],
+      "status": "sold_out",
+      "isOP": false,
+      "isF2": false,
+      "cloneId": 4,
+      "cloneName": "Sharxx Blue"
+    },
+    {
+      "code": "0084",
+      "cross": "Sharxx Blue F2",
+      "motherId": 4,
+      "motherName": "Sharxx Blue",
+      "fatherId": 4,
+      "fatherName": "Sharxx Blue",
+      "pricePerUnit": 25,
+      "quantityUnit": "3.4g",
+      "hasMultiplePricing": false,
+      "allPrices": [{"quantity": "3.4g", "price": 25}],
+      "status": "available",
+      "isOP": false,
+      "isF2": true,
+      "cloneId": 4,
+      "cloneName": "Sharxx Blue"
+    }
+  ],
+  "statistics": {
+    "totalClones": 5,
+    "totalCrosses": 5,
+    "availableCrosses": 4,
+    "soldOutCrosses": 1
+  }
+}
