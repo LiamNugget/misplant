@@ -248,22 +248,58 @@ class MisplantSeeder extends Seeder
     private function seedCloneImages(array $clones): void
     {
         $imageData = [
-            'Bridgesii Lee' => ['bridgesii-lee-01.jpg', 'bridgesii-lee-02.jpg'],
-            'Bridgesii Eileen' => ['bridgesii-eileen-01.jpg'],
-            'Bridgesii SS02' => ['bridgesii-ss02-01.jpg'],
-            'Bridgesii Psycho0' => ['bridgesii-psycho0-01.jpg'],
-            'TPM' => ['tpm-01.jpg', 'tpm-02.jpg', 'tpm-03.jpg'],
-            'Pachanoi Landfill' => ['pachanoi-landfill-01.jpg'],
-            'Pachanoi Yowie' => ['pachanoi-yowie-01.jpg'],
-            'Pachanoi Ogun' => ['pachanoi-ogun-01.jpg'],
-            'Pachanoi Juuls Giant' => ['pachanoi-juuls-giant-01.jpg'],
-            'Peruvianus Rosei 1' => ['peruvianus-rosei1-01.jpg', 'peruvianus-rosei1-02.jpg'],
-            'Peruvianus Sharxx Blue' => ['peruvianus-sharxx-blue-01.jpg'],
-            'Peruvianus Serra Blue' => ['peruvianus-serra-blue-01.jpg'],
-            'Scopulicola' => ['scopulicola-01.jpg'],
-            'Scopulicola Harry' => ['scopulicola-harry-01.jpg'],
-            'Cuzcoensis Super Pedro' => ['cuzcoensis-super-pedro-01.jpg'],
-            'Validus' => ['validus-01.jpg'],
+            'Bridgesii Lee' => [
+                'https://misplant.net/photos/Lee.jpg',
+            ],
+            'Bridgesii Eileen' => [
+                'https://misplant.net/photos/eileenMonstrousDSCN3972.jpg',
+                'https://misplant.net/photos/eileenBudDSC_0521.jpg',
+            ],
+            'Bridgesii SS02' => [
+                'https://misplant.net/photos/ss02budsDSC_0721.jpg',
+                'https://misplant.net/photos/ss02DSC_0092.jpg',
+            ],
+            'Bridgesii Psycho0' => [
+                'https://misplant.net/photos/P0-CuzcoDSC_0190.jpg',
+            ],
+            'TPM' => [
+                'https://misplant.net/photos/tpmBudsDSC_0699.jpg',
+                'https://misplant.net/photos/TPM2BudDSC_0630.jpg',
+                'https://misplant.net/photos/TPMFLRDSC_0703.jpg',
+            ],
+            'Pachanoi Landfill' => [
+                'https://misplant.net/photos/landfillBudDSCN4573.jpg',
+                'https://misplant.net/photos/LandFillBudsDSC_0484.jpg',
+            ],
+            'Pachanoi Yowie' => [
+                'https://misplant.net/photos/Yowie-Buds.jpg',
+            ],
+            'Pachanoi Ogun' => [
+                'https://misplant.net/photos/Ogun.jpg',
+            ],
+            'Peruvianus Rosei 1' => [
+                'https://misplant.net/photos/rosei1DSC0749.jpg',
+            ],
+            'Peruvianus Sharxx Blue' => [
+                'https://misplant.net/photos/sharxxDSCN3196.jpg',
+                'https://misplant.net/photos/sharxxBluntBudDSC_0621.jpg',
+            ],
+            'Peruvianus Serra Blue' => [
+                'https://misplant.net/photos/Serra.JPG',
+            ],
+            'Scopulicola' => [
+                'https://misplant.net/photos/Scopulicola4a.jpg',
+                'https://misplant.net/photos/scopMPscopDSCN3209.jpg',
+                'https://misplant.net/photos/scopFRTSDSC_0832.jpg',
+            ],
+            'Cuzcoensis Super Pedro' => [
+                'https://misplant.net/photos/SuperPedro.jpg',
+            ],
+            'Validus' => [
+                'https://misplant.net/photos/validus2budsDSC_0077.jpg',
+                'https://misplant.net/photos/validisDSC_0181.jpg',
+                'https://misplant.net/photos/validus1budsDSC_0146.jpg',
+            ],
         ];
 
         foreach ($imageData as $cloneName => $images) {
@@ -271,10 +307,11 @@ class MisplantSeeder extends Seeder
                 continue;
             }
 
-            foreach ($images as $index => $filename) {
+            foreach ($images as $index => $url) {
                 CloneImage::create([
                     'cactus_clone_id' => $clones[$cloneName]->id,
-                    'image_url' => '/images/clones/' . $filename,
+                    'image_url' => $url,
+                    'filename' => basename(parse_url($url, PHP_URL_PATH)),
                     'alt_text' => $cloneName,
                     'is_primary' => $index === 0,
                     'sort_order' => $index,
